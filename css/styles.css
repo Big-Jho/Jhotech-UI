@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --primary-color: blue;
+  --light-color: #fff;
+  --dark-color: #000;
+}
+
+#navbar {
+  position: fixed;
+  z-index: 1000;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
+}
+
+#navbar.scrolled {
+  background-color: var(--dark-color);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__menu {
+  font-size: 1rem;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__items {
+  padding: 0 1.25rem;
+  font-weight: 500;
+}
+
+.menu-item-border {
+  visibility: hidden;
+  height: 2px;
+  background-color: var(--light-color);
+  margin-top: 0.4rem;
+  width: 10%;
+  transition: all 350ms ease-in-out;
+}
+
+.menu__items a {
+  padding: 0 0.15rem;
+}
+
+.menu__items:hover .menu-item-border,
+.menu__items.active {
+  visibility: visible;
+  width: 100%;
+}
+
+/* Hero */
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/IMG_4304.jpeg") top center/cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.85;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-color);
+}
+
+.hero__container {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero__text {
+  font-size: 3.5rem;
+  z-index: 3;
+}
+
+.hero__typewriter {
+  font-size: 1.5rem;
+  z-index: 3;
+}
+
+/* About */
+#about {
+  height: 150vh;
+}
