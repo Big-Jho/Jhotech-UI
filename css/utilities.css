@@ -1,7 +1,132 @@
+:root {
+  --container-xxl: 1320px;
+  --container-xl: 1140px;
+  --container-lg: 960px;
+  --container-md: 720px;
+  --container-sm: 540px;
+  --container-vsm: 100%;
+  --primary-color: #0078ff;
+  --light-color: #fff;
+  --dark-color: #000;
+  --grey-color: #4e4e4e;
+  --transition-card: all 200ms ease-in;
+  --animate-portfolio: animate-portfolio 300ms infinity;
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.text-grey {
+  color: var(--grey-color);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.container-xxl {
+  max-width: var(--container-xxl);
+}
+
+.container-xl {
+  max-width: var(--container-xl);
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+}
+
+.container-md {
+  max-width: var(--container-md);
+}
+
+.container-sm {
+  max-width: var(--container-sm);
+}
+
+.container-vsm {
+  max-width: var(--container-vsm);
+}
+
 .section-side-pd {
   padding: 0 3rem;
 }
 
 .section-pd {
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 3rem;
 }
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+
+  .header-text {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .underline {
+    height: 3px;
+    width: 50px;
+    background-color: var(--primary-color);
+  }
+
+  .header-paragraph {
+    font-weight: 700;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+.card {
+  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 481px) {
+  .section-pd {
+    padding: 1.5rem;
+  }
+}
+
+/* Media queries */
+/* @media (min-width: 1400px) {
+  .container {
+    max-width: var(--container-xxl);
+  }
+}
+@media (max-width: 1399px), (min-width: 1200px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+@media (min-width: 992px), (max-width: 1199px) {
+  .container {
+    width: var(--container-lg);
+  }
+}
+@media (min-width: 768px), (max-width: 991px) {
+  .container {
+    width: var(--container-md);
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    width: var(--container-sm);
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    width: var(--container-vsm);
+  }
+} */

@@ -11,6 +11,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css"
+      integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,50 +32,751 @@
   <body>
     <!-- Navbar Setup-->
     <nav id="navbar" class="navbar section-side-pd">
-      <div class="navbar__logo">
-        <h2 class="navbar__logo__text">JB</h2>
-      </div>
-      <div class="navbar__menu">
-        <div class="menu-border"></div>
-        <ul class="menu__list">
-          <li class="menu__items">
-            <a href="#home">Home</a>
-            <div class="menu-item-border"></div>
-          </li>
-          <li class="menu__items">
-            <a href="#about">About</a>
-            <div class="menu-item-border"></div>
-          </li>
-          <li class="menu__items">
-            <a href="#services">Services</a>
-            <div class="menu-item-border"></div>
-          </li>
-          <li class="menu__items">
-            <a href="#blogs">Blogs</a>
-            <div class="menu-item-border"></div>
-          </li>
-          <li class="menu__items">
-            <a href="#contact">Contact</a>
-            <div class="menu-item-border"></div>
-          </li>
-          <li class="menu__items">
-            <a href="#subscription">Subscription</a>
-            <div class="menu-item-border"></div>
-          </li>
-        </ul>
+      <div class="navbar__wrapper">
+        <div class="navbar__logo">
+          <h2 class="navbar__logo--text">JB</h2>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="navbar__mobile-menu">
+          <!-- Hamburger menu icon -->
+          <div class="hamburger-menu">
+            <i id="hamburger" class="fas fa-bars fa-2x"></i>
+          </div>
+        </div>
+
+        <!-- Main menu -->
+        <div class="navbar__menu">
+          <ul class="menu__list">
+            <li class="menu__items">
+              <a href="#hero">Home</a>
+              <div class="menu-item-border"></div>
+            </li>
+            <li class="menu__items">
+              <a href="#about">About</a>
+              <div class="menu-item-border"></div>
+            </li>
+            <li class="menu__items">
+              <a href="#services">Services</a>
+              <div class="menu-item-border"></div>
+            </li>
+            <li class="menu__items">
+              <a href="#blogs">Blogs</a>
+              <div class="menu-item-border"></div>
+            </li>
+            <li class="menu__items">
+              <a href="#contact">Contact</a>
+              <div class="menu-item-border"></div>
+            </li>
+            <li class="menu__items">
+              <a href="#subscription">Subscription</a>
+              <div class="menu-item-border"></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mobile__menu-list__wrapper">
+          <ul class="mobile__menu-list card">
+            <li class="mobile__menu-items">
+              <a class="menu-links" href="#hero">
+                <i class="fas fa-home"></i> Home
+              </a>
+            </li>
+
+            <div class="mobile-menu-item-border"></div>
+
+            <li class="mobile__menu-items">
+              <a class="menu-links" href="#about">
+                <i class="fas fa-info-circle"></i> About
+              </a>
+            </li>
+
+            <div class="mobile-menu-item-border"></div>
+
+            <li class="mobile__menu-items">
+              <a class="menu-links" href="#services">
+                <i class="fas fa-concierge-bell"></i> Services
+              </a>
+            </li>
+
+            <div class="mobile-menu-item-border"></div>
+
+            <li class="mobile__menu-items">
+              <a class="menu-links" href="#blogs">
+                <i class="fas fa-pen-nib"></i> Blogs
+              </a>
+            </li>
+
+            <div class="mobile-menu-item-border"></div>
+
+            <li class="mobile__menu-items">
+              <a class="menu-links" href="#contact">
+                <i class="fas fa-address-book"></i> Contact
+              </a>
+            </li>
+
+            <div class="mobile-menu-item-border"></div>
+
+            <li class="mobile__menu-items">
+              <a class="menu-links" href="#subscription">
+                <i class="fas fa-envelope-open-text"></i> Subscription
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
     <section id="hero" class="hero">
-      <div class="hero__container container">
+      <div class="hero__container">
         <h1 class="hero__text">I am Joseph Oluwalajiki Dada</h1>
         <div class="hero__typewriter"></div>
       </div>
     </section>
 
-    <section id="about" class="about"></section>
+    <section id="about" class="about section-pd">
+      <div class="about__card card container">
+        <!-- container-vsm container-sm container-md container-lg container-xl container-xxl -->
+        <div class="about__left">
+          <div class="about__bio">
+            <div class="about__img">
+              <img src="./images/IMG_4304.jpeg" alt="portfolio-img" />
+            </div>
+            <ul class="about__details">
+              <li class="about__details-list">
+                Name: <strong>Dada Joseph</strong>
+              </li>
+              <li class="about__details-list">
+                Profile: <strong>Front-end Developer</strong>
+              </li>
+              <li class="about__details-list">
+                Email: <strong>contact@jhotech.com</strong>
+              </li>
+              <li class="about__details-list">
+                Phone: <strong>(+234)813-161-1652</strong>
+              </li>
+            </ul>
+          </div>
 
-    <script src="./js/script.js"></script>
+          <div class="about__skills">
+            <div class="about__skill">
+              <label for="HTML">HTML</label>
+              <div class="skill__progressbar">
+                <div class="skill__progress"></div>
+              </div>
+            </div>
+            <div class="about__skill">
+              <label for="HTML">CSS</label>
+              <div class="skill__progressbar">
+                <div class="skill__progress"></div>
+              </div>
+            </div>
+            <div class="about__skill">
+              <label for="HTML">JAVASCRIPT</label>
+              <div class="skill__progressbar">
+                <div class="skill__progress"></div>
+              </div>
+            </div>
+            <div class="about__skill">
+              <label for="HTML">ILLUSTRATOR</label>
+              <div class="skill__progressbar">
+                <div class="skill__progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__right">
+          <div class="section-header">
+            <h2 class="header-text">About Me</h2>
+            <div class="underline"></div>
+          </div>
+          <p class="about__text">
+            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Praesent sapien massa, convallis a pellentesque nec, egestas non
+            nisi. Nulla porttitor accumsan tincidunt.
+          </p>
+          <p class="about__text">
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus
+            suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
+            sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
+          </p>
+
+          <p class="about__text">
+            Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut
+            lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section-pd">
+      <div class="section-header">
+        <h2 class="header-text">Services</h2>
+        <div class="underline"></div>
+        <p class="header-paragraph">Listed here are the services we provide</p>
+      </div>
+
+      <div class="services__grid container">
+        <div class="services__grid-item">
+          <div class="services__card-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3 class="services__card-title">Nesciunt Mete</h3>
+          </a>
+          <p class="services__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+            natus quia esse! Fugiat consequuntur aliquid dolores dicta
+            provident!
+          </p>
+        </div>
+        <div class="services__grid-item">
+          <div class="services__card-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3 class="services__card-title">Nesciunt Mete</h3>
+          </a>
+          <p class="services__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+            natus quia esse! Fugiat consequuntur aliquid dolores dicta
+            provident!
+          </p>
+        </div>
+        <div class="services__grid-item">
+          <div class="services__card-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3 class="services__card-title">Nesciunt Mete</h3>
+          </a>
+          <p class="services__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+            natus quia esse! Fugiat consequuntur aliquid dolores dicta
+            provident!
+          </p>
+        </div>
+        <div class="services__grid-item">
+          <div class="services__card-icon">
+            <i class="fas fa-computer"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3 class="services__card-title">Nesciunt Mete</h3>
+          </a>
+          <p class="services__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+            natus quia esse! Fugiat consequuntur aliquid dolores dicta
+            provident!
+          </p>
+        </div>
+        <div class="services__grid-item">
+          <div class="services__card-icon">
+            <i class="fas fa-mobile"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3 class="services__card-title">Nesciunt Mete</h3>
+          </a>
+          <p class="services__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+            natus quia esse! Fugiat consequuntur aliquid dolores dicta
+            provident!
+          </p>
+        </div>
+        <div class="services__grid-item">
+          <div class="services__card-icon">
+            <i class="fas fa-wifi"></i>
+          </div>
+          <a href="#" class="stretched-link">
+            <h3 class="services__card-title">Nesciunt Mete</h3>
+          </a>
+          <p class="services__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+            natus quia esse! Fugiat consequuntur aliquid dolores dicta
+            provident!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="stats section-pd">
+      <div class="stats-grid container">
+        <div class="stat-item">
+          <div class="stat-value client-counter">200</div>
+          <p class="stat-description">Clients</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value client-counter">521</div>
+          <p class="stat-description">Projects</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value client-counter">1412</div>
+          <p class="stat-description">Hours Of Support</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value client-counter">20</div>
+          <p class="stat-description">Award</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section-pd">
+      <div class="section-header">
+        <h2 class="header-text">Portfolio</h2>
+        <div class="underline"></div>
+        <p class="header-paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          provident.
+        </p>
+      </div>
+
+      <ul class="portfolio-nav">
+        <li><a class="portfolio-nav-link active" filter="all">ALL </a></li>
+        <li><a class="portfolio-nav-link" filter="app">APP </a></li>
+        <li><a class="portfolio-nav-link" filter="product">PRODUCT</a></li>
+        <li><a class="portfolio-nav-link" filter="branding">BRANDING</a></li>
+        <li><a class="portfolio-nav-link" filter="books">BOOKS</a></li>
+      </ul>
+
+      <div class="portfolio-showcase container">
+        <div class="portfolio-content" data-type="app">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/app-1.jpg" alt="app-1" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>App 1</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links gallary-item">
+              <a
+                href="./images/portfolio/app-1.jpg"
+                class="zoom-link"
+                data-title="App 1"
+                data-lightbox="portfolio-app"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="books">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/books-1.jpg" alt="books-1" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Book 1</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/books-1.jpg"
+                class="glightbox zoom-link"
+                data-lightbox="books"
+                data-title="Book 1"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="branding">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/branding-1.jpg" alt="branding-1" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/branding-1.jpg"
+                class="glightbox zoom-link"
+                data-lightbox="branding"
+                data-title="Branding 1"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="product">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/product-1.jpg" alt="product-1" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/product-1.jpg"
+                class="glightbox zoom-link"
+                data-lightbox="product"
+                data-title="Product 1"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-content" data-type="app">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/app-2.jpg" alt="app-2" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>App 2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/app-2.jpg"
+                class="glightbox zoom-link"
+                data-gallery="portfolio-app"
+                data-title="App 1"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="books">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/books-2.jpg" alt="books-2" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Book 2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/books-2.jpg"
+                class="glightbox zoom-link"
+                data-lightbox="book"
+                data-title="Book 2"
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="branding">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/branding-2.jpg" alt="branding-2" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Branding 2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/branding-2.jpg"
+                class="glightbox zoom-link"
+                data-lightbox=""
+                data-title=""
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="product">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/product-2.jpg" alt="product-2" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/product-2.jpg"
+                class="glightbox zoom-link"
+                data-lightbox=""
+                data-title=""
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-content" data-type="app">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/app-3.jpg" alt="app-3" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>App 3</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/app-3.jpg"
+                class="glightbox zoom-link"
+                data-lightbox=""
+                data-title=""
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="books">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/books-3.jpg" alt="books-3" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Book 3</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/books-3.jpg"
+                class="glightbox zoom-link"
+                data-lightbox=""
+                data-title=""
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="branding">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/branding-3.jpg" alt="branding-3" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Branding 3</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/branding-3.jpg"
+                class="glightbox zoom-link"
+                data-lightbox=""
+                data-title=""
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-content" data-type="product">
+          <div class="portfolio-image">
+            <img src="./images/portfolio/product-3.jpg" alt="product-3" />
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h4>Product 3</h4>
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="portfolio-links">
+              <a
+                href="./images/portfolio/product-3.jpg"
+                class="glightbox zoom-link"
+                data-lightbox=""
+                data-title=""
+              >
+                <i class="fas fa-search-plus"></i>
+              </a>
+              <a href="#" class="details-link">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing section-pd">
+      <div class="section-header">
+        <h2 class="header-text">Pricing</h2>
+        <div class="underline"></div>
+        <p class="header-paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+
+      <div class="container pricing-grid">
+        <div class="pricing-item">
+          <h3 class="pricing-text">Portfolio Website</h3>
+          <span class="price">&dollar;100</span>
+        </div>
+        <div class="pricing-item">
+          <h3 class="pricing-text">Full-stack Web App</h3>
+          <span class="price">&dollar;500</span>
+        </div>
+        <div class="pricing-item">
+          <h3 class="pricing-text">Web Management</h3>
+          <span class="price">&dollar;20/Month</span>
+        </div>
+        <div class="pricing-item">
+          <h3 class="pricing-text">Front-end Development</h3>
+          <span class="price">&dollar;150</span>
+        </div>
+        <div class="pricing-item">
+          <h3 class="pricing-text">Search Engine Optimization (SEO)</h3>
+          <span class="price">&dollar;120</span>
+        </div>
+        <div class="pricing-item">
+          <h3 class="pricing-text">UI/UX Design</h3>
+          <span class="price">&dollar;150</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="questions section-pd" id="questions">
+      <div class="container questions-flex">
+        <div class="questions-intro">
+          <h2 class="intro-title">
+            Frequently Asked <span class="bold">Questions</span>
+          </h2>
+          <p class="intro-details text-grey">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus facilis aliquam nemo sit magni, doloremque itaque
+          </p>
+        </div>
+        <div class="questions-container">
+          <div class="card question-accordion">
+            <div class="question">
+              <div class="question-text text-primary">
+                <span class="question-number text-primary">
+                  1.&nbsp;&nbsp;&nbsp;
+                </span>
+                <p>What or who is BJ-Tech?</p>
+              </div>
+              <i class="fas fa-chevron-down toggler"></i>
+            </div>
+            <p class="answer">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus,
+              dolorum dignissimos eveniet quaerat expedita ratione sunt rem,
+              possimus incidunt est consequuntur! Officia consequuntur ratione
+              pariatur?
+            </p>
+          </div>
+          <div class="card question-accordion collapse">
+            <div class="question">
+              <div class="question-text">
+                <span class="question-number text-primary">
+                  2.&nbsp;&nbsp;&nbsp;
+                </span>
+                <p>What services do JB-Tech offer?</p>
+              </div>
+              <i class="fas fa-chevron-right toggler"></i>
+            </div>
+            <p class="answer">
+              Minus, dolorum dignissimos eveniet quaerat expedita ratione sunt
+              rem, possimus! Officia consequuntur ratione pariatur? Lorem ipsum
+              dolor sit amet consectetur, adipisicing elit.
+            </p>
+          </div>
+          <div class="card question-accordion collapse">
+            <div class="question">
+              <div class="question-text">
+                <span class="question-number text-primary">
+                  3.&nbsp;&nbsp;&nbsp;
+                </span>
+                <p>How much does JB-Tech services cost?</p>
+              </div>
+              <i class="fas fa-chevron-right toggler"></i>
+            </div>
+            <p class="answer">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus,
+              ratione pariatur? dolorum dignissimos eveniet quaerat expedita
+              ratione sunt rem,
+            </p>
+          </div>
+          <div class="card question-accordion collapse">
+            <div class="question">
+              <div class="question-text">
+                <span class="question-number text-primary">
+                  4.&nbsp;&nbsp;&nbsp;
+                </span>
+                <p>
+                  Is price negotiation or bargaining allowed for the services
+                  provided?
+                </p>
+              </div>
+              <i class="fas fa-chevron-right toggler"></i>
+            </div>
+            <p class="answer">
+              Dipisicing elit. Minus, dolorum dignissimos eveniet quaerat
+              expedita ratione sunt rem, possimus incidunt est! Officia
+              consequuntur ratione pariatur?
+            </p>
+          </div>
+          <div class="card question-accordion collapse">
+            <div class="question">
+              <div class="question-text">
+                <span class="question-number text-primary">
+                  5.&nbsp;&nbsp;&nbsp;
+                </span>
+                <p>Is there any form of reward for making referrals?</p>
+              </div>
+              <i class="fas fa-chevron-right toggler"></i>
+            </div>
+            <p class="answer">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus,
+              dolorum dignissimos eveniet quaerat expedita ratione sunt rem,
+              possimus incidunt est consequuntur!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The typewriter effect -->
     <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+
+    <!-- Add this before your custom script -->
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <!-- Custom script -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
