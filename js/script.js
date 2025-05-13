@@ -1,6 +1,10 @@
+// const { width } = require("cli");
+
 const navbar = document.getElementById("navbar");
 const mobileMenu = document.querySelector(".mobile__menu-list__wrapper");
 const hamburger = document.querySelector("#hamburger");
+const progressArray = document.querySelectorAll(".skill__progress");
+const skillsContainer = document.querySelector(".about__skills");
 
 // To know an element is in Viewport
 const isInViewport = (el) => {
@@ -13,6 +17,42 @@ const isInViewport = (el) => {
   );
 };
 
+// Filter Portfolio-items
+const filter = (type) => {
+  const items = document.querySelectorAll(".portfolio-content");
+
+  for (let x = 0; x < items.length; x++) {
+    const item = items[x];
+    item.classList.remove("hidden");
+    item.classList.remove("show");
+  }
+
+  if (type === "all") {
+    for (let x = 0; x < items.length; x++) {
+      const item = items[x];
+      item.classList.remove("hidden");
+      item.classList.add("show");
+    }
+    return;
+  }
+
+  for (let x = 0; x < items.length; x++) {
+    const item = items[x];
+    if (item.getAttribute("data-type") === type) {
+      if (!item.classList.contains("hidden")) {
+        item.classList.remove("hidden");
+        item.classList.add("show");
+      }
+    } else if (item.getAttribute("data-type") !== type) {
+      if (!item.classList.contains("hidden")) {
+        item.classList.add("hidden");
+        item.classList.remove("show");
+      }
+    }
+  }
+};
+
+// Hamburger menu display
 hamburger.addEventListener("click", function () {
   if (hamburger.classList.contains("fa-bars")) {
     mobileMenu.classList.add("show");
@@ -25,6 +65,7 @@ hamburger.addEventListener("click", function () {
   }
 });
 
+// Typewriter effect
 document.addEventListener("DOMContentLoaded", function () {
   const typingContainer = document.querySelector(".hero__typewriter");
 
@@ -49,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .start();
 });
 
+// Transparent navbar background when scrolled
 document.addEventListener("scroll", function () {
   if (window.scrollY > 80) {
     navbar.classList.add("scrolled");
@@ -59,13 +101,145 @@ document.addEventListener("scroll", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const progressArray = document.querySelectorAll(".skill__progress");
-  progressArray[0].style.width = "100%";
-  progressArray[1].style.width = "90%";
-  progressArray[2].style.width = "80%";
-  progressArray[3].style.width = "65%";
+document.addEventListener("DOMContentLoaded", () => {
+  const animationKeyframes = {
+    move100: [
+      {
+        width: 0,
+      },
+      {
+        width: "100%",
+      },
+    ],
+
+    move90: [
+      {
+        width: 0,
+      },
+      {
+        width: "90%",
+      },
+    ],
+    move80: [
+      {
+        width: 0,
+      },
+      {
+        width: "80%",
+      },
+    ],
+    move65: [
+      {
+        width: 0,
+      },
+      {
+        width: "65%",
+      },
+    ],
+  };
+  const increaseOptions = {
+    iterations: 1,
+    duration: 10000,
+  };
+  const increase100 = progressArray[0].animate(
+    animationKeyframes.move100,
+    increaseOptions
+  );
+  const increase90 = progressArray[1].animate(
+    animationKeyframes.move90,
+    increaseOptions
+  );
+  const increase80 = progressArray[2].animate(
+    animationKeyframes.move80,
+    increaseOptions
+  );
+  const increase65 = progressArray[3].animate(
+    animationKeyframes.move65,
+    increaseOptions
+  );
+
+  increase100.play();
+  increase100.playbackRate = 1;
+
+  increase90.play();
+  increase90.playbackRate = 1;
+
+  increase80.play();
+  increase80.playbackRate = 1;
+
+  increase65.play();
+  increase65.playbackRate = 1;
 });
+
+// window.addEventListener("scroll", () => {
+//   const animationKeyframes = {
+//     move100: [
+//       {
+//         width: 0,
+//       },
+//       {
+//         width: "100%",
+//       },
+//     ],
+
+//     move90: [
+//       {
+//         width: 0,
+//       },
+//       {
+//         width: "90%",
+//       },
+//     ],
+//     move80: [
+//       {
+//         width: 0,
+//       },
+//       {
+//         width: "80%",
+//       },
+//     ],
+//     move65: [
+//       {
+//         width: 0,
+//       },
+//       {
+//         width: "65%",
+//       },
+//     ],
+//   };
+//   const increaseOptions = {
+//     iterations: 1,
+//     duration: 10000,
+//   };
+//   const increase100 = progressArray[0].animate(
+//     animationKeyframes.move100,
+//     increaseOptions
+//   );
+//   const increase90 = progressArray[1].animate(
+//     animationKeyframes.move90,
+//     increaseOptions
+//   );
+//   const increase80 = progressArray[2].animate(
+//     animationKeyframes.move80,
+//     increaseOptions
+//   );
+//   const increase65 = progressArray[3].animate(
+//     animationKeyframes.move65,
+//     increaseOptions
+//   );
+
+//   increase100.play();
+//   increase100.playbackRate = 1;
+
+//   increase90.play();
+//   increase90.playbackRate = 1;
+
+//   increase80.play();
+//   increase80.playbackRate = 1;
+
+//   increase65.play();
+//   increase65.playbackRate = 1;
+// });
 
 const updateContainer = () => {
   const width = window.innerWidth;
@@ -140,50 +314,6 @@ const updateContainer = () => {
 window.addEventListener("resize", updateContainer);
 document.addEventListener("DOMContentLoaded", updateContainer);
 document.addEventListener("load", updateContainer);
-
-// Filter Portfolio-items
-const filter = (type) => {
-  // const parent = document.querySelector(".portfolio-showcase");
-  const items = document.querySelectorAll(".portfolio-content");
-
-  for (let x = 0; x < items.length; x++) {
-    const item = items[x];
-    item.classList.remove("hidden");
-    item.classList.remove("show");
-  }
-
-  if (type === "all") {
-    for (let x = 0; x < items.length; x++) {
-      const item = items[x];
-      item.classList.remove("hidden");
-      item.classList.add("show");
-      // item.style.display = "block";
-    }
-    return;
-  }
-
-  for (let x = 0; x < items.length; x++) {
-    const item = items[x];
-    if (item.getAttribute("data-type") === type) {
-      if (!item.classList.contains("hidden")) {
-        item.classList.remove("hidden");
-        item.classList.add("show");
-        // item.style.display = "block";
-      }
-    } else if (item.getAttribute("data-type") !== type) {
-      if (!item.classList.contains("hidden")) {
-        item.classList.add("hidden");
-        item.classList.remove("show");
-      }
-    }
-
-    // return;
-
-    // item.getAttribute("data-type") === type
-    //   ? item.classList.add("show")
-    //   : item.classList.remove("show");
-  }
-};
 
 document
   .querySelector(".portfolio-nav")
@@ -263,6 +393,7 @@ questionsContainer.addEventListener("click", (event) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const statsContainer = document.querySelector(".stats-grid.container");
+  const durations = [200, 521, 1421, 20];
 
   window.addEventListener("scroll", () => {
     if (isInViewport(statsContainer)) {
@@ -273,8 +404,8 @@ document.addEventListener("DOMContentLoaded", function () {
           const el = entry.target;
           if (entry.isIntersecting && !el.classList.contains("is-visible")) {
             counterUp(el, {
-              duration: 6000,
-              delay: 1,
+              duration: 2000,
+              delay: 20,
             });
             el.classList.add("is-visible");
           }
@@ -293,3 +424,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// $(".menu-").on("click", function (event) {
+//   if (this.hash !== "") {
+//     event.preventDefault();
+//     const hash = this.hash;
+//     $("html, body").animate(
+//       {
+//         scrollTop: $(hash).offset().top,
+//       },
+//       1200
+//     );
+//   }
+// });

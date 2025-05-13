@@ -5,7 +5,8 @@
   margin: 0;
   box-sizing: border-box;
   line-height: 1.5rem;
-  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  /* transition-duration: 1s; */
 }
 
 ul {
@@ -283,7 +284,23 @@ body {
 .skill__progress {
   height: 100%;
   background-color: var(--primary-color);
-  width: 30%;
+  /* width: 30%; */
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-65 {
+  width: 65%;
+}
+
+.width-80 {
+  width: 80%;
 }
 
 .about__right .section-header {
@@ -715,7 +732,7 @@ body {
   }
 
   .stat-item {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
 
   .portfolio-showcase {
