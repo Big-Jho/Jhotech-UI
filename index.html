@@ -129,7 +129,11 @@
 
     <section id="hero" class="hero">
       <div class="hero__container">
-        <h1 class="hero__text">I am Joseph Oluwalajiki Dada</h1>
+        <h1 class="hero__text">
+          My name is
+          <br class="conditional-break" />
+          <span class="design">JOSEPH OLUWALAJIKI DADA</span>
+        </h1>
         <div class="hero__typewriter"></div>
       </div>
     </section>
@@ -771,12 +775,132 @@
       </div>
     </section>
 
+    <section class="contact section-pd" id="contact">
+      <div class="section-header">
+        <h2 class="header-text">Contact</h2>
+        <div class="underline"></div>
+        <p class="header-paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+
+      <div class="contact-flex container card">
+        <div class="contact-flex-item">
+          <div class="contact-icon">
+            <i class="fas fa-location fa-2x"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Address</h3>
+            <p>51A, Housing Estate, Ado-Ekiti, Ekiti.</p>
+          </div>
+        </div>
+
+        <div class="contact-flex-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone fa-2x"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Call Us</h3>
+            <p>+234 813 161 1652</p>
+          </div>
+        </div>
+
+        <div class="contact-flex-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope fa-2x"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Email Us</h3>
+            <p>info@bigjhotech.com</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="" class="contact-form container card">
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            class="contact-inputs"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+            class="contact-inputs"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+            class="contact-inputs"
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            placeholder="Message"
+            class="contact-inputs"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit" class="submit-btn" />
+        </div>
+      </form>
+    </section>
+
+    <section class="response section-pd" id="response">
+      <div id="success-message">
+        <div class="success-container">
+          <i class="fas fa-circle-check fa-3x"></i>
+          <h2>Your message has been sent!</h2>
+          <p></p>
+
+          <button class="submit-btn" id="close-btn">
+            <i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Done
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer section-side-pd bg-primary text-light" id="footer">
+      <p>
+        &copy; Copyright &nbsp;<span class="text-bold">JhoTech</span>
+        &nbsp; All Rights Reserved
+      </p>
+
+      <div class="footer-socials">
+        <a href="" target="_blank" class="social-icon">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="" target="_blank" class="social-icon">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="" target="_blank" class="social-icon">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="" target="_blank" class="social-icon">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+
+      <p>Designed By <span class="text-light-grey">BootstrapMade</span></p>
+    </footer>
+
     <!-- The typewriter effect -->
     <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
 
     <!-- Add this before your custom script -->
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <!-- Custom script -->
-    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

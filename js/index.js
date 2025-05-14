@@ -1,4 +1,6 @@
-// const { width } = require("cli");
+import Form from "./Form";
+
+const form = new Form();
 
 const navbar = document.getElementById("navbar");
 const mobileMenu = document.querySelector(".mobile__menu-list__wrapper");
@@ -75,17 +77,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   typewriter
-    .typeString("Web Developer!")
-    .pauseFor(2500)
+    .typeString("A Web Developer!")
+    .pauseFor(3000)
     .deleteChars(11)
     .typeString(" Designer!")
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString("A Pharmacist-in-making!")
-    .pauseFor(2500)
-    .deleteAll()
+    .pauseFor(3000)
+    .deleteChars(13)
+    .typeString("Pharmacist-in-a-bit!")
+    .pauseFor(3000)
+    .deleteChars(20)
     .typeString("Graphics Designer!")
-    .pauseFor(2500)
+    .pauseFor(3000)
     .deleteAll()
     .start();
 });
@@ -170,76 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
   increase65.play();
   increase65.playbackRate = 1;
 });
-
-// window.addEventListener("scroll", () => {
-//   const animationKeyframes = {
-//     move100: [
-//       {
-//         width: 0,
-//       },
-//       {
-//         width: "100%",
-//       },
-//     ],
-
-//     move90: [
-//       {
-//         width: 0,
-//       },
-//       {
-//         width: "90%",
-//       },
-//     ],
-//     move80: [
-//       {
-//         width: 0,
-//       },
-//       {
-//         width: "80%",
-//       },
-//     ],
-//     move65: [
-//       {
-//         width: 0,
-//       },
-//       {
-//         width: "65%",
-//       },
-//     ],
-//   };
-//   const increaseOptions = {
-//     iterations: 1,
-//     duration: 10000,
-//   };
-//   const increase100 = progressArray[0].animate(
-//     animationKeyframes.move100,
-//     increaseOptions
-//   );
-//   const increase90 = progressArray[1].animate(
-//     animationKeyframes.move90,
-//     increaseOptions
-//   );
-//   const increase80 = progressArray[2].animate(
-//     animationKeyframes.move80,
-//     increaseOptions
-//   );
-//   const increase65 = progressArray[3].animate(
-//     animationKeyframes.move65,
-//     increaseOptions
-//   );
-
-//   increase100.play();
-//   increase100.playbackRate = 1;
-
-//   increase90.play();
-//   increase90.playbackRate = 1;
-
-//   increase80.play();
-//   increase80.playbackRate = 1;
-
-//   increase65.play();
-//   increase65.playbackRate = 1;
-// });
 
 const updateContainer = () => {
   const width = window.innerWidth;
@@ -425,15 +357,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// $(".menu-").on("click", function (event) {
-//   if (this.hash !== "") {
-//     event.preventDefault();
-//     const hash = this.hash;
-//     $("html, body").animate(
-//       {
-//         scrollTop: $(hash).offset().top,
-//       },
-//       1200
-//     );
-//   }
-// });
+document.getElementById("close-btn").addEventListener("click", () => {});
