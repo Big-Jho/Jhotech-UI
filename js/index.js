@@ -1,6 +1,6 @@
-import Form from "./Form";
+// import Form from "./Form";
 
-const form = new Form();
+// const form = new Form();
 
 const navbar = document.getElementById("navbar");
 const mobileMenu = document.querySelector(".mobile__menu-list__wrapper");
